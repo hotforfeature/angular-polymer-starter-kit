@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Do not use CSS custom properties or mixins in this file */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: #eeeeee;
+}
