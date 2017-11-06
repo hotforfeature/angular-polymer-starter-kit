@@ -10,7 +10,5 @@ if (environment.production) {
 }
 
 webcomponentsReady().then(() => {
-  return platformBrowserDynamic().bootstrapModule(AppModule, {
-    enableLegacyTemplate: false
-  });
+  return platformBrowserDynamic().bootstrapModule(AppModule);
 }).catch(err => console.log(err));
