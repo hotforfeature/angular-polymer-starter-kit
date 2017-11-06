@@ -13,6 +13,10 @@ npm install
 bower install
 ```
 
+### CLI Patch
+
+Origami works by patching the Angular CLI. If you receive postcss warnings or errors that are unable to locate your bower imports, try running `npm run postinstall` to re-execute the patch script.
+
 ## Development Server
 
 This command will launch the Angular CLI dev server at `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
