@@ -1,6 +1,6 @@
 # Angular Polymer Starter Kit
 
-This template is inspired by the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit) and serves to help developers with a starting point on building an app with Angular 4 and Polymer 2.
+This template is inspired by the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit) and serves to help developers with a starting point on building an app with Angular 5 and Polymer 2.
 
 This project uses [Origami](https://github.com/hotforfeature/origami) to enable interoperability between Angular and Polymer.
 
