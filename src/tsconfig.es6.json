@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/es6",
+    "baseUrl": "./",
+    "target": "es6",
+    "types": []
+  },
+  "angularCompilerOptions": {
+    "preserveWhitespaces": "off"
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

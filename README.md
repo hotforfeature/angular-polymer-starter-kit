@@ -15,7 +15,7 @@ bower install
 
 ### CLI Patch
 
-Origami works by patching the Angular CLI. If you receive postcss warnings or errors that are unable to locate your bower imports, try running `npm run postinstall` to re-execute the patch script.
+Origami works by patching the Angular CLI. If you receive errors about your bower html imports, try running `npm run patch-cli` to re-execute the patch script.
 
 ## Development Server
 

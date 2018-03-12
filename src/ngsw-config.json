@@ -1,0 +1,24 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "appshell",
+    "installMode": "lazy",
+    "updateMode": "lazy",
+    "resources": {
+      "files": [
+        "/assets/**/*",
+        "/bower_components/**/*"
+      ],
+      "versionedFiles": [
+        "/**/*.html",
+        "!/index.html",
+        "/**/*.chunk.js",
+        "/**/*.bundle.js",
+        "/**/*.css"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,300,300italic,400italic,500,500italic,700,700italic"
+      ]
+    }
+  }]
+}

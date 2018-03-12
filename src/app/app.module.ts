@@ -12,7 +12,7 @@ import { View404Component } from './view404/view404.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ServiceWorkerModule,
+    ServiceWorkerModule.register('/ngsw-worker.js'),
     PolymerModule.forRoot(),
     AppRoutingModule
   ],

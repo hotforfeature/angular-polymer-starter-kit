@@ -5,20 +5,49 @@
   },
   "apps": [
     {
+      "name": "es6",
       "root": "src",
-      "outDir": "dist",
+      "outDir": "dist/es6/",
       "assets": [
         "assets",
         "favicon.ico",
         "manifest.json",
-        "bower_components/webcomponentsjs/custom*.js",
         "bower_components/webcomponentsjs/web*.js"
       ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
-      "tsconfig": "tsconfig.app.json",
+      "tsconfig": "tsconfig.es6.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "serviceWorker": true,
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "es5",
+      "root": "src",
+      "outDir": "dist/es5/",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "manifest.json",
+        "bower_components/webcomponentsjs/custom-elements-es5-adapter.js",
+        "bower_components/webcomponentsjs/web*.js"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.es5.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "serviceWorker": true,
