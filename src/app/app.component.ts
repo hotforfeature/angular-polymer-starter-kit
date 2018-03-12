@@ -19,6 +19,7 @@ import '../elements/my-icons.html';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'My App';
   narrow: boolean;
   @ViewChild('drawer') drawer: ElementRef;
 

@@ -7,8 +7,8 @@ describe('angular-polymer-starter-kit App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display header title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getHeaderText()).toEqual('My App');
   });
 });
