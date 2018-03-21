@@ -7,6 +7,7 @@
     "types": []
   },
   "angularCompilerOptions": {
+    "entryModule": "app/app.module#AppModule",
     "preserveWhitespaces": "off"
   },
   "exclude": [
