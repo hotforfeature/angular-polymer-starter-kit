@@ -15,7 +15,7 @@
         "bower_components/webcomponentsjs/web*.js"
       ],
       "index": "index.html",
-      "main": "main.ts",
+      "main": "boot.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.es6.json",
@@ -44,7 +44,7 @@
         "bower_components/webcomponentsjs/web*.js"
       ],
       "index": "index.html",
-      "main": "main.ts",
+      "main": "boot.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.es5.json",
