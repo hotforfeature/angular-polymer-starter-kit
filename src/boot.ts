@@ -1,5 +1,8 @@
 import { webcomponentsReady } from '@codebakery/origami';
 
+// webpack's require will be available at runtime
+declare const require: any;
+
 webcomponentsReady().then(() => {
   // We cannot import any Polymer elements before this promise resolves.
   // Since main.ts imports AppComponent (which imports Polymer), we need to
@@ -9,13 +12,7 @@ webcomponentsReady().then(() => {
   // bootstrap code since it's dynamically imported. We must add an
   // "entryModule" to tsconfig.json to let the CLI know which module is being
   // bootstrapped.
-
-  // Here we use /* "webpackMode": eager */ to instruct webpack not to split
-  // this dynamic import into a separate chunk. We also need to change "module"
-  // to "esnext" in tsconfig.json
-  // Alternatively to dynamic imports, you could use require('./main'); for the
-  // same effect
-  import(/* "webpackMode": eager */'./main');
+  require('./main');
 }).catch(err => console.log(err));
 
 // This is ONLY required if the entrypoint to the app ("main.ts") directly
