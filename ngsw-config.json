@@ -7,9 +7,7 @@
     "resources": {
       "files": [
         "/assets/**/*",
-        "/bower_components/**/*"
-      ],
-      "versionedFiles": [
+        "/bower_components/**/*",
         "/**/*.html",
         "!/index.html",
         "/**/*.chunk.js",
