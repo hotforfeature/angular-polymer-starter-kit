@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SwUpdate } from '@angular/service-worker';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   class MockSwUpdate {

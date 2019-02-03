@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'view1', loadChildren: 'app/view1/view1.module#View1Module' },
   { path: 'view2', loadChildren: 'app/view2/view2.module#View2Module' },
   { path: 'view3', loadChildren: 'app/view3/view3.module#View3Module' },
+  { path: 'demo', loadChildren: 'app/demo/demo.module#DemoModule' },
   { path: '**', component: View404Component }
 ];
 

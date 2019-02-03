@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  padding: 10px;
+
+  --red-color: red;
+  --blue-color: blue;
+}
+
+h2 {
+  margin: 0;
+  color: #212121;
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+section:not(:last-child) {
+  padding-right: 16px;
+}
+
+h3 {
+  margin: 0 0 8px;
+  color: #212121;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+}
+
+.red {
+  color: var(--red-color);
+}
+
+.blue {
+  color: var(--blue-color);
+}
+
+.list-item {
+  border-bottom: 1px solid #757575;
+}
+
+pre {
+  margin: 0;
+}

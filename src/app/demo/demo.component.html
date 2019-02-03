@@ -1,0 +1,117 @@
+<div class="card">
+  <h1>Angular Form Support</h1>
+  <h2>Default</h2>
+  <div class="row">
+    <section>
+      <h3><code>[(ngModel)]</code></h3>
+      <label>Angular: {{inputNgModel | json}}</label>
+      <paper-input label="Polymer" required [(ngModel)]="inputNgModel" origami></paper-input>
+    </section>
+
+    <section>
+      <h3><code>[formControl]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('inputControl'))}}</label>
+      <paper-input label="Polymer" required [formControl]="formGroup.get('inputControl')" origami></paper-input>
+    </section>
+
+    <section [formGroup]="formGroup">
+      <h3><code>[formControlName]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('inputNamed'))}}</label>
+      <paper-input label="Polymer" required formControlName="inputNamed" origami></paper-input>
+    </section>
+  </div>
+  <h2>Checkbox</h2>
+  <div class="row">
+    <section>
+      <h3><code>[(ngModel)]</code></h3>
+      <label>Angular: {{checkboxNgModel | json}}</label>
+      <paper-checkbox [(ngModel)]="checkboxNgModel" origami>Polymer</paper-checkbox>
+    </section>
+
+    <section>
+      <h3><code>[formControl]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('checkboxControl'))}}</label>
+      <paper-checkbox [formControl]="formGroup.get('checkboxControl')" origami>Polymer</paper-checkbox>
+    </section>
+
+    <section [formGroup]="formGroup">
+      <h3><code>[formControlName]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('checkboxNamed'))}}</label>
+      <paper-checkbox formControlName="checkboxNamed" origami>Polymer</paper-checkbox>
+    </section>
+  </div>
+  <h2>Select</h2>
+  <div class="row">
+    <section>
+      <h3><code>[(ngModel)]</code></h3>
+      <label>Angular: {{selectedItem | json}}</label>
+      <vaadin-combo-box required [items]="items" [(ngModel)]="selectedItem" origami></vaadin-combo-box>
+    </section>
+
+    <section>
+      <h3><code>[formControl]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('selectControl'))}}</label>
+      <vaadin-combo-box required [items]="items" [formControl]="formGroup.get('selectControl')" origami></vaadin-combo-box>
+    </section>
+
+    <section [formGroup]="formGroup">
+      <h3><code>[formControlName]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('selectNamed'))}}</label>
+      <vaadin-combo-box required [items]="items" formControlName="selectNamed" origami></vaadin-combo-box>
+    </section>
+  </div>
+  <h2>Multi-Select</h2>
+  <div class="row">
+    <section>
+      <h3><code>[(ngModel)]</code></h3>
+      <label>Angular: {{selectedItems | json}}</label>
+      <paper-listbox attr-for-selected="name" multi [(ngModel)]="selectedItems" origami>
+        <paper-item *ngFor="let item of items" [name]="item">{{item}}</paper-item>
+      </paper-listbox>
+    </section>
+
+    <section>
+      <h3><code>[formControl]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('multiSelectControl'))}}</label>
+      <paper-listbox attr-for-selected="name" multi [formControl]="formGroup.get('multiSelectControl')" origami>
+        <paper-item *ngFor="let item of items" [name]="item">{{item}}</paper-item>
+      </paper-listbox>
+    </section>
+
+    <section [formGroup]="formGroup">
+      <h3><code>[formControl]</code></h3>
+      <label>Angular: {{getStatusAndValue(formGroup.get('multiSelectNamed'))}}</label>
+      <paper-listbox attr-for-selected="name" multi formControlName="multiSelectNamed" origami>
+        <paper-item *ngFor="let item of items" [name]="item">{{item}}</paper-item>
+      </paper-listbox>
+    </section>
+  </div>
+
+  <h1>ShadyCSS polyfill</h1>
+  <p class="red">I am red!</p>
+  <p class="blue">I am blue!</p>
+
+  <h1>Polymer <code>&lt;template&gt;</code> Stamping</h1>
+  <pre><code ngNonBindable>
+  &lt;template ngNonBindable&gt;
+    &lt;div class="list-item"&gt;
+      &lt;div&gt;Item: [[item]]&lt;/div&gt;
+      &lt;div&gt;One-Way: [[hostOneWay]]&lt;/div&gt;
+      &lt;paper-checkbox checked="{{hostTwoWay}}"&gt;Two-Way&lt;/paper-checkbox&gt;
+      &lt;div&gt;Computed: [[getHostComputed(item)]]&lt;/div&gt;
+      &lt;button on-click="itemClicked"&gt;Host Event&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  </code></pre>
+  <iron-list #ironList [items]="items">
+    <template ngNonBindable>
+      <div class="list-item">
+        <div>Item: [[item]]</div>
+        <div>One-Way: [[hostOneWay]]</div>
+        <paper-checkbox checked="{{hostTwoWay}}">Two-Way</paper-checkbox>
+        <div>Computed: [[getHostComputed(item)]]</div>
+        <button on-click="itemClicked">Host Event</button>
+      </div>
+    </template>
+  </iron-list>
+</div>

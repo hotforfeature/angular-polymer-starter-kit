@@ -13,14 +13,18 @@
           "options": {
             "outputPath": "dist/es6/",
             "index": "src/index.html",
-            "main": "src/boot.ts",
+            "main": "src/main.ts",
             "tsConfig": "src/tsconfig.es6.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json",
-              { "glob": "web*.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" }
+              {
+                "glob": "{*loader.js,*adapter.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "node_modules/@webcomponents/webcomponentsjs"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -80,7 +84,11 @@
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json",
-              { "glob": "web*.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" }
+              {
+                "glob": "{*loader.js,*adapter.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "node_modules/@webcomponents/webcomponentsjs"
+              }
             ]
           }
         },
@@ -133,15 +141,18 @@
           "options": {
             "outputPath": "dist/es5/",
             "index": "src/index.html",
-            "main": "src/boot.ts",
+            "main": "src/main.ts",
             "tsConfig": "src/tsconfig.es5.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills-es5.ts",
             "assets": [
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json",
-              { "glob": "*adapter.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" },
-              { "glob": "web*.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" }
+              {
+                "glob": "{*loader.js,*adapter.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "node_modules/@webcomponents/webcomponentsjs"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -191,7 +202,7 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills-es5.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
@@ -201,8 +212,11 @@
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json",
-              { "glob": "*adapter.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" },
-              { "glob": "web*.js", "input": "src/bower_components/webcomponentsjs/", "output": "/bower_components/webcomponentsjs/" }
+              {
+                "glob": "{*loader.js,*adapter.js,bundles/*.js}",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "node_modules/@webcomponents/webcomponentsjs"
+              }
             ]
           }
         },

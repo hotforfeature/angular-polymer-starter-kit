@@ -1,4 +1,8 @@
-/* Do not use CSS custom properties or mixins in this file */
+html {
+  --app-primary-color: #4285f4;
+  --app-secondary-color: black;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', 'Noto', sans-serif;
